@@ -271,6 +271,7 @@ class MultiplexConnection(object):
             except socket.error:
                 if sock is not None:
                     sock.close()
+
                 raise
     def close(self):
         """close all sockets, otherwise CLOSE_WAIT"""
